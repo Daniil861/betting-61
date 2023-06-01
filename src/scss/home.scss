@@ -1,0 +1,529 @@
+//====================================================================================================
+.main {
+	// .main__body
+
+	&__body {
+		position: relative;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		row-gap: 40px;
+
+		min-height: 100vh;
+		padding-top: 45px;
+	}
+
+	&__buttons {
+		display: flex;
+		flex-direction: column;
+		row-gap: 35px;
+
+		@media (max-height: 650px) {
+			row-gap: 15px;
+		}
+	}
+}
+
+//========================================================================================================================================================
+// bet-screen
+.bet-screen {
+	position: absolute;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+	opacity: 0;
+	visibility: hidden;
+	transform: translateX(10px);
+
+	transition: all 0.5s ease 0s;
+
+	background-image: url("@img/other/bg.png");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	pointer-events: none;
+
+	._bet-screen & {
+		pointer-events: fill;
+		opacity: 1;
+		visibility: visible;
+		transform: translateX(0);
+	}
+	// .bet-screen__body
+
+	&__body {
+		position: relative;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		row-gap: 40px;
+
+		min-height: 100vh;
+		padding-top: 80px;
+	}
+
+	// .bet-screen__title
+
+	&__title {
+		font-weight: 900;
+		font-size: 36px;
+		line-height: math.div(44, 36);
+		text-transform: uppercase;
+
+		color: #f2f2f2;
+
+		text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	}
+
+	// .bet-screen__box
+
+	&__box {
+		display: flex;
+		flex-direction: column;
+		row-gap: 30px;
+	}
+
+	// .bet-screen__item-box
+
+	&__item-box {
+		display: flex;
+		align-items: flex-end;
+
+		width: 295px;
+		height: 279px;
+
+		background-color: rgba(48, 48, 48, 0.67);
+		border: 1px solid #c1c1c1;
+		border-radius: 11px;
+	}
+
+	&__item-inner {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		row-gap: 16px;
+		width: 100%;
+
+		padding: 20px;
+	}
+
+	// .bet-screen__display
+
+	&__display {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		width: 251px;
+		height: 65px;
+
+		background-color: #303030;
+		border: 1px solid #c1c1c1;
+		border-radius: 11px;
+	}
+
+	// .bet-screen__icon
+
+	&__icon {
+	}
+
+	// .bet-screen__score
+
+	&__score {
+		min-width: 113px;
+		font-weight: 900;
+		font-size: 20px;
+		line-height: math.div(24, 20);
+
+		color: #ffffff;
+		text-align: center;
+	}
+
+	// .bet-screen__controls
+
+	&__controls {
+	}
+
+	// .bet-screen__button
+
+	&__button {
+	}
+}
+
+.controls-bet {
+	display: flex;
+	width: 100%;
+	// .controls-bet__body
+
+	&__body {
+		display: flex;
+		flex-direction: column;
+		row-gap: 22px;
+		width: 100%;
+	}
+
+	// .controls-bet__top
+
+	&__top {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	// .controls-bet__minus
+
+	&__minus,
+	&__plus {
+		width: 62px;
+		height: 45.04px;
+
+		background: linear-gradient(180deg, #fefe03 0%, #ffff01 20.31%, #fff400 46.67%, #ffcb01 48.75%, #ffad00 100%);
+		border: 5px solid #ffffff;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+		border-radius: 10px;
+
+		span {
+			font-weight: 900;
+			font-size: 20px;
+			line-height: math.div(24, 20);
+
+			background: linear-gradient(180deg, #de5efa 0%, #6506b6 100%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+	}
+
+	// .controls-bet__plus
+
+	&__plus {
+	}
+
+	// .controls-bet__bottom
+
+	&__bottom {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	// .controls-bet__bet
+
+	&__bet {
+		width: 62px;
+		height: 30.04px;
+
+		background-image: linear-gradient(
+			180deg,
+			#fefe03 0%,
+			#ffff01 20.31%,
+			#fff400 46.67%,
+			#ffcb01 48.75%,
+			#ffad00 100%
+		);
+		border: 3px solid #ffffff;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+		border-radius: 10px;
+		span {
+			font-weight: 900;
+			font-size: 20px;
+			line-height: math.div(24, 20);
+
+			background: linear-gradient(180deg, #de5efa 0%, #6506b6 100%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+	}
+}
+
+//========================================================================================================================================================
+
+.game {
+	position: absolute;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+	opacity: 0;
+	visibility: hidden;
+	transform: translateX(10px);
+
+	transition: all 0.5s ease 0s;
+
+	background-image: url("@img/other/bg.png");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	pointer-events: none;
+
+	._game & {
+		pointer-events: fill;
+		opacity: 1;
+		visibility: visible;
+		transform: translateX(0);
+	}
+
+	// .game__body
+
+	&__body {
+		position: relative;
+
+		display: flex;
+		flex-direction: column;
+
+		min-height: 100vh;
+	}
+
+	// .game__header
+
+	&__header {
+	}
+
+	// .game__basket
+
+	&__basket {
+		height: 350px;
+	}
+
+	// .game__footer
+
+	&__footer {
+		flex: 1 1 auto;
+	}
+}
+
+.basket {
+	@media (min-width: 700px) and (min-height: 700px) {
+		height: 550px;
+	}
+	// .basket__body
+
+	&__body {
+		display: flex;
+		flex-direction: column;
+
+		align-items: center;
+
+		padding-top: 8px;
+	}
+
+	// .basket__score-box
+
+	&__score-box {
+		margin-bottom: 30px;
+	}
+
+	// .basket__image
+
+	&__image {
+		position: relative;
+		height: 209px;
+	}
+
+	// .basket__ball
+
+	&__ball {
+		position: absolute;
+		z-index: 3;
+		bottom: 0;
+		right: 0;
+
+		transform: translate(50%, 50%);
+		width: 66px;
+		height: 66px;
+
+		background-image: url("@img/other/ball.png");
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+		&._lose {
+			animation: loseBall 1s ease 0s forwards;
+		}
+		&._win {
+			animation: winBall 1s ease 0s forwards;
+		}
+	}
+
+	&__mesh {
+		position: absolute;
+		z-index: 2;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+
+//========================================================================================================================================================
+
+.header {
+	background: radial-gradient(50% 50% at 50% 50%, #ff9010 0%, #ff5903 100%);
+	// .header__body
+
+	&__body {
+		position: relative;
+
+		display: flex;
+		justify-content: center;
+		padding-top: 10px;
+		padding-bottom: 15px;
+
+		&::before {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 13px;
+
+			background-color: #fefe03;
+		}
+	}
+
+	// .header__button
+
+	&__button {
+		position: absolute;
+		top: 18px;
+		left: 24px;
+
+		width: 50px;
+		height: 50px;
+		background-image: url("@img/icons/btn-back.png");
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+		filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+	}
+
+	// .header__title
+
+	&__title {
+		img {
+			@media (max-height: 700px) {
+				max-height: 150px;
+			}
+			@media (max-height: 650px) {
+				max-height: 100px;
+			}
+		}
+	}
+}
+
+.score-box {
+	// .score-box__body
+
+	&__body {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		column-gap: 10px;
+
+		width: 139px;
+		height: 32px;
+
+		background-color: #303030;
+		border: 1px solid #ffff03;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+		border-radius: 19.5px;
+	}
+
+	// .score-box__icon
+
+	&__icon {
+	}
+
+	// .score-box__score
+
+	&__score {
+		padding-right: 10px;
+		font-weight: 600;
+		font-size: 14px;
+		line-height: math.div(17, 14);
+
+		color: #ffffff;
+	}
+}
+
+.footer {
+	display: flex;
+	height: 100%;
+	&__body {
+		display: flex;
+		width: 100%;
+		background-image: url("@img/other/title-bottom.png");
+		background-position: right top;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+}
+//========================================================================================================================================================
+
+.icon-game {
+	width: 37px;
+	height: 37px;
+
+	background-image: url("@img/icons/coin.svg");
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	.score-box & {
+		width: 19px;
+		height: 19px;
+	}
+}
+
+//====================================================================================================
+@keyframes no-money {
+	0% {
+		color: #fff;
+	}
+	100% {
+		color: rgb(255, 0, 0);
+		transform: scale(1.1);
+	}
+}
+@keyframes delete-money {
+	0% {
+		color: #fff;
+	}
+	100% {
+		color: rgb(255, 155, 155);
+		transform: translateY(3px);
+	}
+}
+@keyframes add-money {
+	100% {
+		color: yellow;
+		transform: translateY(-3px);
+	}
+}
+
+@keyframes loseBall {
+	0% {
+		transform: translate(50%, 50%);
+	}
+	40% {
+		transform: translate(0, -130px);
+	}
+	100% {
+		transform: translate(150px, -160px);
+	}
+}
+@keyframes winBall {
+	0% {
+		transform: translate(50%, 50%);
+	}
+	30% {
+		transform: translate(-78px, -120px);
+	}
+	100% {
+		transform: translate(-78px, 100%);
+		z-index: 2;
+	}
+}

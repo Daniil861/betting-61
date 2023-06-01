@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Betting-61"
+})
+
+<body>
+	<div class="wrapper">
+		<div class="wrapper__main main">
+			<div class="main__body">
+				<div class="main__ball">
+					<img src="@img/other/ball.png" alt="Image">
+				</div>
+				<div class="main__buttons">
+					<button type="button" data-btn="game" class="main__button button"><span>PLAY GAME</span></button>
+					<button type="button" data-btn="slot" class="main__button button"><span>PLAY SLOT</span></button>
+					<button type="button" data-btn="privacy" class="main__button button"><span>PRIVACY POLICY</span></button>
+				</div>
+			</div>
+		</div>
+
+		<div class="wrapper__bet-screen bet-screen">
+			<div class="bet-screen__body">
+				<div class="bet-screen__title">SET BET</div>
+				<div class="bet-screen__box">
+					<div class="bet-screen__item-box">
+						<div class="bet-screen__item-inner">
+							<div class="bet-screen__display">
+								<div class="bet-screen__icon icon-game"></div>
+								<div class="bet-screen__score bet-score">0</div>
+							</div>
+							<div class="bet-screen__controls controls-bet">
+								<div class="controls-bet__body">
+									<div class="controls-bet__top">
+										<button type="button" data-btn="bet-down"
+											class="controls-bet__minus"><span>-</span></button>
+										<button type="button" data-btn="bet-up" class="controls-bet__plus"><span>+</span></button>
+									</div>
+									<div class="controls-bet__bottom">
+										<button type="button" data-bet="100" class="controls-bet__bet"><span>100</span></button>
+										<button type="button" data-bet="200" class="controls-bet__bet"><span>200</span></button>
+										<button type="button" data-bet="500" class="controls-bet__bet"><span>500</span></button>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<button type="button" data-btn="bet" class="bet-screen__button button"><span>SET BET</span></button>
+				</div>
+			</div>
+		</div>
+
+		<div class="wrapper__game game">
+			<div class="game__body">
+				<div class="game__header header">
+					<div class="header__body">
+						<button type="button" data-btn="game-home" class="header__button"></button>
+						<div class="header__title">
+							<img src="@img/other/title.png" alt="Image">
+						</div>
+					</div>
+				</div>
+				<div class="game__basket basket">
+					<div class="basket__body">
+						<div class="basket__score-box score-box">
+							<div class="score-box__body">
+								<div class="score-box__icon icon-game"></div>
+								<span class="score-box__score score">0</span>
+							</div>
+						</div>
+						<div class="basket__image">
+							<img src="@img/other/basket.svg" alt="Image">
+
+							<div class="basket__ball"></div>
+							<img src="@img/other/mesh.svg" class="basket__mesh" alt="Image">
+						</div>
+					</div>
+				</div>
+				<div class="game__footer footer">
+					<div class="footer__body">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="wrapper__slot slot">
+			<div class="slot__body">
+				<div class="slot__header header">
+					<div class="header__body">
+						<button type="button" data-btn="slot-home" class="header__button"></button>
+						<div class="header__title">
+							<img src="@img/other/title.png" alt="Image">
+						</div>
+					</div>
+				</div>
+				<div class="slot__game">
+					<div class="slot__box">
+						<div class="slot__cont">
+							<div class="slot__score-box score-box">
+								<div class="score-box__body">
+									<div class="score-box__icon icon-game"></div>
+									<span class="score-box__score score">0</span>
+								</div>
+							</div>
+							<div id="slot1" class="slot1">
+								<div id="reels1" class="reels1">
+									<div class="reel1"></div>
+									<div class="reel1"></div>
+									<div class="reel1"></div>
+									<div class="reel1"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="slot__controls controls-slot">
+						<div class="controls-slot__body">
+							<div class="controls-slot__button-box">
+								<button type="button" data-btn="slot-start"
+									class="controls-slot__button-spin"><span>Spin</span></button>
+								<button type="button" data-btn="slot-auto"
+									class="controls-slot__button-auto"><span>AUTO</span></button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="slot__footer footer">
+					<div class="footer__body">
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	@@include('html/_js.htm',{})
+</body>
+
+</html>
